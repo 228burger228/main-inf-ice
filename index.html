@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OO ICE — Магазин холодильников</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">
+        <!-- локальный файл-логотип, путь к загруженному изображению -->
+        <img src="/mnt/data/95d0a3ec-5a35-4592-911a-930d44fb95cd.png" alt="OO ICE" />
+        <span class="brand">OO ICE</span>
+      </a>
+
+      <nav class="main-nav">
+        <button class="menu-btn" id="menuBtn">Категории ▾</button>
+        <ul class="dropdown" id="dropdownMenu" aria-hidden="true">
+          <li><a href="#">Холодильники</a></li>
+          <li><a href="#">Морозильники</a></li>
+          <li><a href="#">Мини-холодильники</a></li>
+          <li><a href="#">Промышленные</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="/">Главная</a>
+      <span>›</span>
+      <a href="#">Каталог</a>
+      <span>›</span>
+      <span class="current">Холодильники</span>
+    </nav>
+
+    <!-- Секция с фильтрами + быстрыми ссылками -->
+    <section class="controls">
+      <div class="filters">
+        <details open>
+          <summary>Фильтры</summary>
+          <div class="filters-grid">
+            <label><input type="checkbox" data-filter="type" value="Однокамерный"/> Однокамерные</label>
+            <label><input type="checkbox" data-filter="type" value="Многокамерный"/> Многокамерные</label>
+            <label><input type="checkbox" data-filter="tech" value="NoFrost"/> NoFrost</label>
+            <label><input type="checkbox" data-filter="tech" value="Inverter"/> Inverter</label>
+          </div>
+        </details>
+      </div>
+
+      <div class="quick-links">
+        <a href="#" class="chip">Акции</a>
+        <a href="#" class="chip">Новинки</a>
+        <a href="#" class="chip">Популярное</a>
+      </div>
+    </section>
+
+    <!-- Список товаров -->
+    <section id="productList" class="products" aria-live="polite">
+      <!-- карточки товаров генерируются script.js -->
+    </section>
+
+    <!-- Навигация под товарами: пагинация/ссылки -->
+    <nav class="product-footer">
+      <div class="pagination">
+        <a href="#" class="page prev">← Назад</a>
+        <span class="page current">1</span>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page next">Вперёд →</a>
+      </div>
+
+      <div class="product-links">
+        <a href="/products/product1.html">ATLANT ХМ 6025-031 — страница товара</a>
+        <a href="/products/product2.html">Haier C2F636 — страница товара</a>
+        <a href="/products/product3.html">Bosch Serie 4 — страница товара</a>
+      </div>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>OO ICE</strong>
+        <p>Продажа холодильников — быстро, удобно, с гарантией.</p>
+      </div>
+      <div class="contacts">
+        <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+        <a href="mailto:info@oo-ice.ru">info@oo-ice.ru</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
