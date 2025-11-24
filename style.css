@@ -1,0 +1,102 @@
+:root {
+    --bg-primary: #111;
+    --bg-secondary: #151515;
+    --bg-button: #222;
+    --bg-button-hover: #333;
+    --text-color: #fff;
+    --dropdown-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Заменил .body на body */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: var(--bg-primary); /* Использование CSS переменной */
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 200px;
+    box-shadow: 0 0 10px var(--dropdown-shadow);
+    z-index: 1000; /* Добавил z-index для уверенности */
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.dropdown a:hover {
+    background-color: var(--bg-button-hover);
+}
+
+.products {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+    overflow: hidden; /* Для корректного отображения скругленных углов с изображениями */
+}
+
+.card:hover {
+    transform: scale(1.03);
+    background-color: var(--bg-secondary);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    display: block; /* Убирает лишнее пространство под изображением */
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.card button {
+    padding: 10px 15px;
+    background-color: var(--bg-button);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: inherit; /* Наследует шрифт от родителя */
+}
+
+.card button:hover {
+    background-color: var(--bg-button-hover);
+}
+
+/* Добавил для адаптивности */
+@media (max-width: 768px) {
+    .products {
+        padding: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+}
