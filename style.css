@@ -1,0 +1,59 @@
+body {
+}
+.dropdown {
+display: none;
+position: absolute;
+top: 50px;
+right: 0;
+background: #111;
+padding: 10px;
+border-radius: 10px;
+min-width: 200px;
+box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.dropdown a {
+display: block;
+padding: 8px;
+text-decoration: none;
+color: #fff;
+border-radius: 5px;
+}
+.dropdown a:hover {
+background: #333;
+}
+.products {
+padding: 30px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+.card {
+background: #111;
+padding: 20px;
+border-radius: 12px;
+text-align: center;
+transition: 0.3s;
+}
+.card:hover {
+transform: scale(1.03);
+background: #151515;
+}
+.card img {
+width: 100%;
+border-radius: 10px;
+}
+.card h3 {
+margin: 10px 0;
+}
+.card button {
+padding: 10px 15px;
+background: #222;
+color: #fff;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s;
+}
+.card button:hover {
+background: #333;
+}
